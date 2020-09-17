@@ -4,7 +4,7 @@ The idea behind this project is that **“to know the direction of sound by taki
 ## Table of contents
 * [General info](#general-info)
 * [Project Details](#project-details)
-  * [Datasets (Training and Testing)](#reducing-the-image-size)
+  * [Datasets (Training and Testing)](#datasets-training-and-testing)
     * [Extraction of valuable data](#extraction-of-valuable-data)
     * [Convolution](#convolution)
     * [Downsampling](#downsampling)
@@ -22,7 +22,7 @@ The result can be seen in frequency domain of the signal boosting some frequenci
 To take advantage of this understanding, many techniques are used to create 3D sound. These filtering techniques are called head related transfer function (HRTFs). 
 
 <h1 align="center">
-<img src="img/head.png" width="300">
+<img src="img/Head.png" width="300">
 </h1>
 
 Instead of getting data physically, the use of HRTF data provides better result.
@@ -51,7 +51,7 @@ To understand how we are Pre-processing the data, we have added a section of “
 The diagram below shows the index number corresponded the angle we are going to implement,
 
 <h1 align="center">
-<img src="img/data_representation.png" width="400">
+<img src="img/data_representation.PNG" width="400">
 </h1>
 
 For example, Index 16 takes the data for angle=10 degrees
@@ -114,7 +114,7 @@ The signal now looks like:
 To smoothen the signal and reduce the number of inputs for our model, we down sampled the signal.
  
 <h1 align="center">
-<img src="img/down.png" width="400">
+<img src="img/downsampling.png" width="400">
 </h1>
 
 Here Blue line is the audio signal's frequency domain representation of what frequencies a human ear precept on the Left ear when the sound source is on left side.
@@ -125,7 +125,7 @@ In the mat file, the data is given for the front source at column index 0
 We are going train out MLP model on 0, 45, 90, 135 and 180 degrees starting from left side. As shown in the diagram below:
  
 <h1 align="center">
-<img src="img/Train_area.png" width="400">
+<img src="img/Train_area.PNG" width="400">
 </h1>
 
 ### Know the direction
@@ -161,7 +161,7 @@ While testing the model, we used different audio. And it gave us the correct res
 Angle at index [0] is 135 degrees
 Angle at index [1] is 0 degrees
 
-## References
+# References
 1.	An Integrated Approach of 3D Sound Rendering, by Yong Guk Kim1, Chan Jun Chun1, School of Information and Communications
 
 2.	https://medium.com/@mikesmales/sound-classification-using-deep-learning-8bc2aa1990b7
